@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol RecettesRepository{
+    var recettes: [Recette] {get}
+}

@@ -8,11 +8,22 @@
 import SwiftUI
 
 struct RecetteBareView: View {
+    let recette: Recette
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack{
+            Image(recette.image).resizable().scaledToFit().frame(width: 80, height: 80).cornerRadius(10).clipped()
+            
+            VStack(alignment: .leading, spacing: 4) {
+                Text(recette.name).font(.headline)
+                Text("Prep : \(recette.prepTime) min , Cook: \(recette.cookTime) min")
+                    .font(.subheadline)
+            }
+        }
+        
+        Spacer()
+        
     }
 }
 
-#Preview {
-    RecetteBareView()
-}
+

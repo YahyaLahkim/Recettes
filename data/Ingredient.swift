@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct Ingredient{
+    var name: String
+    var quantity: Double
+    var unit: String
+}
